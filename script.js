@@ -1,20 +1,20 @@
-let perso1 = prompt('Qual o nome do primeiro personagem')
-let perso2 = prompt('Qual o nome do segundo personagem')
-let atk = parseInt(prompt(`Qual o poder de ataque do ${perso1}`))
-let vida = parseInt(prompt(`Qual a vida do ${perso2}`))
-let def = parseInt(prompt(`Quanto de defesa o ${perso2}`))
-let escudo = prompt('Tem ou não tem escudo?')
-if (atk > def && escudo === 'não tem') {
+let perso1 = 'john'
+let perso2 = 'wick'
+let atk = 10
+let vida = 10
+let def = 6
+let escudo = false
+if (atk > def && escudo == false ) {
     atk = atk - def
     vida = vida - atk
-    alert(`${perso1} atacou. ${perso2} sofreu ${atk} de dano e não possui escudo. Sua vida agora é ${vida}`)
-} else if (atk > def && escudo === 'tem') {
+    console.log(`${perso1} atacou. ${perso2} sofreu ${atk} de dano e não possui escudo. Sua vida agora é ${vida}`)
+} else if (atk > def && escudo == true) {
     atk = atk - def
     atk = atk / 2
     vida = vida - atk
-    alert(`${perso1} atacou. ${perso2} sofreu ${atk} de dano por possuir escudo. Sua vida agora é ${vida}`)
+    console.log(`${perso1} atacou. ${perso2} sofreu ${atk} de dano por possuir escudo. Sua vida agora é ${vida}`)
 } else {
-    alert(`${perso1} atacou. mas não afetou ${perso2}. Nenhum dano causado!`)
+    console.log(`${perso1} atacou. mas não afetou ${perso2}. Nenhum dano causado!`)
 }
 
 
